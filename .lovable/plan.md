@@ -14,13 +14,16 @@ Rebuild the client's site as a modern, fast React app. The reference site (abdou
 | `/training` | Training & events: IMCAS Training Village, FACE Anatomy Master Course, symposiums, webinars |
 | `/contact` | Teal hero banner with team photo; "Get in touch" info card (address: 64 Avenue Azzouz Boukhris, 4054 Sahloul 3 — Sousse, Tunisia; phones +216 24 610 004 / +216 73 369 975; email firas.b.khalifa@pharmaevolution.net; hours Mon–Fri 9:00–17:00 GMT+1); validated message form (name, company, email, phone, subject, message) |
 
-## Design (from your screenshot)
+## Design (from your screenshots)
 
 - White background, deep navy headings, teal/cyan accent, light teal highlight behind key words
-- Sticky top nav: logo left, links center, language switcher right
-- Hero: left text + CTAs ("Explore our products" dark pill, "Contact sales" teal pill), right rounded image card with slider dots and product overlay chip
+- Sticky top nav: logo left, links center, "English" language switcher pill right
+- Home hero: left text + CTAs ("Explore our products" dark pill, "Contact sales" teal pill), right rounded image card with slider dots and product overlay chip
+- Inner pages (products, contact, etc.): full-width teal rounded hero banner with white heading, small label chip, CTA pill, and a photo on the right
 - Service cards: white cards, thin border, teal line icons, generous spacing
+- Product cards: pastel-tinted image panel on top, name + description + green-check feature list below
 - Process: 4 numbered steps with pastel-colored number chips connected by dotted line
+- Contact form: white card, labeled inputs with red validation messages, dark "Send" pill button
 - Typography: bold geometric sans for headings, clean sans for body
 - All colors defined as design tokens in `src/styles.css` (no hardcoded colors in components)
 
