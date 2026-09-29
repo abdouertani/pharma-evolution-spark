@@ -30,11 +30,11 @@ Rebuild the client's site as a modern, fast React app. The reference site (abdou
 ## Build steps
 
 1. Set up the design system (teal/navy palette, fonts, radii) in `src/styles.css`
-2. Generate hero and product imagery (dermal filler / aesthetic medicine theme)
+2. Generate imagery: home hero slide, inner-page hero photos, product pack shots (Hyabell, Varioderm, Variofill, DermaCare) on pastel backgrounds
 3. Build shared layout: header nav + footer in the root route
-4. Build the home page exactly per the screenshot
-5. Build the 6 remaining pages using the reference site's text content
-6. Contact form: front-end only for now (can wire to email/backend later if you want)
+4. Build the home page exactly per the home screenshot
+5. Build the 6 remaining pages per the products/contact screenshots and the reference site's text content
+6. Contact form: front-end validation only for now (can wire to email/backend later if you want)
 7. Per-page SEO titles/descriptions
 
 ## Notes
