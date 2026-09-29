@@ -9,10 +9,10 @@ Rebuild the client's site as a modern, fast React app. The reference site (abdou
 | `/` | Hero "Innovating Health Across Africa and the Middle East" with image slider, core services (4 cards), process steps, trusted partnerships |
 | `/about` | Company story, mission, team/values |
 | `/services` | 6 services (Medical Promotion, Regulatory Affairs, Training, Market Research, Tenders, Partnerships) + 4-step process |
-| `/products` | Dermal fillers (Hyabell®, Varioderm®, Variofill®), DermaCare skincare, technical highlights |
+| `/products` | Teal hero banner; Dermal fillers (Hyabell®, Varioderm®, Variofill®) as product cards with pastel image backgrounds and checkmark feature lists; DermaCare skincare; Technical Highlights icon row (Made in Germany, CE certified, 33 mg/ml HA, Non-animal HA, 36-month shelf life, IMCAS validated) |
 | `/partners` | Adoderm GmbH flagship partnership + regulatory/institutional partners (ANMAPS, ARP, AIRP, DPM, AMMPS) |
 | `/training` | Training & events: IMCAS Training Village, FACE Anatomy Master Course, symposiums, webinars |
-| `/contact` | Contact info, message form, office/visit section |
+| `/contact` | Teal hero banner with team photo; "Get in touch" info card (address: 64 Avenue Azzouz Boukhris, 4054 Sahloul 3 — Sousse, Tunisia; phones +216 24 610 004 / +216 73 369 975; email firas.b.khalifa@pharmaevolution.net; hours Mon–Fri 9:00–17:00 GMT+1); validated message form (name, company, email, phone, subject, message) |
 
 ## Design (from your screenshot)
 
