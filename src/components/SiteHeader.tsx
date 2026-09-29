@@ -1,6 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Activity, ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
+import logoMark from "@/assets/logo-mark.png.asset.json";
 
 const links = [
   { to: "/about", label: "About" },
@@ -19,7 +20,11 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link to="/" className="flex items-center gap-2">
-          <Activity className="h-6 w-6 text-primary" strokeWidth={2.5} />
+          <img
+            src={logoMark.url}
+            alt="PharmaEvolution logo"
+            className="h-9 w-auto"
+          />
           <span className="font-heading text-lg font-bold tracking-tight text-navy">
             PHARMA<span className="font-light text-primary">EVOLUTION</span>
           </span>
