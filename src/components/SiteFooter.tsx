@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Activity, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import logoMark from "@/assets/logo-mark.png.asset.json";
 
 export function SiteFooter() {
   return (
@@ -7,7 +8,11 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-2">
-            <Activity className="h-6 w-6 text-primary" strokeWidth={2.5} />
+            <img
+              src={logoMark.url}
+              alt="PharmaEvolution logo"
+              className="h-9 w-auto"
+            />
             <span className="font-heading text-lg font-bold tracking-tight">
               PHARMA<span className="font-light text-primary">EVOLUTION</span>
             </span>
