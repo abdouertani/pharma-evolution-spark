@@ -1,6 +1,6 @@
 # PharmaEvolution — Website Rebuild
 
-Rebuild the client's site as a modern, fast React app. The reference site (abdouertani.github.io/pharmaevolution) provides the structure and content; your screenshot is the final visual design (clean white/teal medical aesthetic).
+Rebuild the client's site as a modern, fast React app. The reference site (abdouertani.github.io/pharmaevolution) provides the structure and content; your three screenshots (home, products, contact) are the final visual design: clean white/teal medical aesthetic, teal hero banners, rounded cards.
 
 ## Pages (7 routes, matching the reference site)
 
