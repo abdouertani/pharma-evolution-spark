@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Compass, HeartHandshake, Microscope, Target } from "lucide-react";
 import { PageHero } from "../components/PageHero";
-import heroContact from "../assets/hero-contact.jpg";
+import heroAbout from "../assets/hero-about.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -65,8 +65,8 @@ function AboutPage() {
         description="PharmaEvolution is a Tunisian-based pharmaceutical marketing company led by pharmacists and physicians with over 25 years of experience."
         ctaLabel="Meet our partners"
         ctaTo="/partners"
-        image={heroContact}
-        imageAlt="The PharmaEvolution team"
+        image={heroAbout}
+        imageAlt="Healthcare professionals in a modern medical office"
       />
 
       <section className="mx-auto max-w-6xl px-4 pt-14 sm:px-6">
