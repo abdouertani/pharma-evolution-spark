@@ -65,6 +65,7 @@ function PartnersPage() {
         ctaTo="/contact"
         image={variofillAsset.url}
         imageAlt="Variofill by our German partner Adoderm"
+        imageFit="contain"
       />
 
       {/* Adoderm */}
