@@ -14,6 +14,8 @@ import heroTraining from "../assets/hero-training.jpg";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Our Services — PharmaEvolution" },
       {
         name: "description",

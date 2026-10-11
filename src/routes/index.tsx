@@ -17,6 +17,8 @@ import { Button } from "../components/ui/button";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "PharmaEvolution — Innovating Health Across Africa and the Middle East" },
       {
         name: "description",

@@ -19,6 +19,8 @@ import dermacareAsset from "../assets/product-dermacare.png.asset.json";
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Products — PharmaEvolution" },
       {
         name: "description",
