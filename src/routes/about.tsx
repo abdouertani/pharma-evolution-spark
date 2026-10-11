@@ -6,6 +6,8 @@ import heroContact from "../assets/hero-contact.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "About — PharmaEvolution" },
       {
         name: "description",

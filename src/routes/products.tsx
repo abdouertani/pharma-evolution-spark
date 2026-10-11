@@ -11,14 +11,16 @@ import {
 } from "lucide-react";
 import { PageHero } from "../components/PageHero";
 import heroProducts from "../assets/hero-products.jpg";
-import productHyabell from "../assets/product-hyabell.jpg";
-import productVarioderm from "../assets/product-varioderm.jpg";
-import productVariofill from "../assets/product-variofill.jpg";
-import productDermacare from "../assets/product-dermacare.jpg";
+import hyabellAsset from "../assets/product-hyabell.png.asset.json";
+import variodermAsset from "../assets/product-varioderm.png.asset.json";
+import variofillAsset from "../assets/product-variofill.png.asset.json";
+import dermacareAsset from "../assets/product-dermacare.png.asset.json";
 
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Products — PharmaEvolution" },
       {
         name: "description",
@@ -42,7 +44,7 @@ const fillers = [
   {
     tag: "Popular",
     name: "Hyabell®",
-    image: productHyabell,
+    image: hyabellAsset.url,
     bg: "bg-pastel-lavender",
     text: "Precision and comfort for natural results with advanced hyaluronic acid technology.",
     features: [
@@ -55,7 +57,7 @@ const fillers = [
   {
     tag: "Versatile",
     name: "Varioderm®",
-    image: productVarioderm,
+    image: variodermAsset.url,
     bg: "bg-pastel-blue",
     text: "Balanced hydration and volume restoration for comprehensive facial aesthetics.",
     features: [
@@ -68,7 +70,7 @@ const fillers = [
   {
     tag: "Premium",
     name: "Variofill®",
-    image: productVariofill,
+    image: variofillAsset.url,
     bg: "bg-pastel-pink",
     text: "High-cohesivity HA filler for gluteal contouring, offering exceptional projection and longevity.",
     features: [
@@ -84,7 +86,7 @@ const skincare = [
   {
     tag: "Essential",
     name: "DermaCare",
-    image: productDermacare,
+    image: dermacareAsset.url,
     bg: "bg-pastel-purple",
     text: "Daily use formulations supporting post-treatment recovery and long-term skin health maintenance.",
     features: [
@@ -115,12 +117,14 @@ function ProductCard({
 }: (typeof fillers)[number]) {
   return (
     <div className="overflow-hidden rounded-2xl border border-border bg-card transition-shadow hover:shadow-md">
-      <div className={`${bg} p-6`}>
+      <div className="p-4">
         <img
           src={image}
           alt={`${name} packaging`}
           loading="lazy"
-          className="aspect-[4/3] w-full rounded-xl object-cover"
+          width={956}
+          height={598}
+          className={`${bg} aspect-[956/598] w-full rounded-lg object-contain`}
         />
       </div>
       <div className="p-6">

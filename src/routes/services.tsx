@@ -9,10 +9,13 @@ import {
   LineChart,
 } from "lucide-react";
 import { PageHero } from "../components/PageHero";
+import heroTraining from "../assets/hero-training.jpg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Our Services — PharmaEvolution" },
       {
         name: "description",
@@ -87,6 +90,8 @@ function ServicesPage() {
         description="We offer specialized services designed to accelerate market entry and strengthen brand positioning. Our goal is to turn innovation into trusted, accessible healthcare solutions."
         ctaLabel="Request consultation"
         ctaTo="/contact"
+        image={heroTraining}
+        imageAlt="Healthcare professionals exchanging medical expertise"
       />
 
       <section className="mx-auto max-w-6xl px-4 pt-14 sm:px-6">
