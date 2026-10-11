@@ -10,7 +10,6 @@ import {
 import { useState } from "react";
 import heroHome from "../assets/hero-home.jpg";
 import heroProducts from "../assets/hero-products.jpg";
-import heroTraining from "../assets/hero-training.jpg";
 import variofillAsset from "../assets/product-variofill.png.asset.json";
 import { Button } from "../components/ui/button";
 
@@ -73,7 +72,7 @@ function HomePage() {
   const slides = [
     { image: heroHome, alt: "Body contouring aesthetic treatment" },
     { image: heroProducts, alt: "LED skincare treatment" },
-    { image: heroTraining, alt: "Aesthetic medicine training" },
+    { image: variofillAsset.url, alt: "Variofill gluteal augmentation product" },
   ];
 
   return (

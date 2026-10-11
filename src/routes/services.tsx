@@ -9,7 +9,7 @@ import {
   LineChart,
 } from "lucide-react";
 import { PageHero } from "../components/PageHero";
-import heroTraining from "../assets/hero-training.jpg";
+import heroServices from "../assets/hero-services.jpg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -90,8 +90,8 @@ function ServicesPage() {
         description="We offer specialized services designed to accelerate market entry and strengthen brand positioning. Our goal is to turn innovation into trusted, accessible healthcare solutions."
         ctaLabel="Request consultation"
         ctaTo="/contact"
-        image={heroTraining}
-        imageAlt="Healthcare professionals exchanging medical expertise"
+        image={heroServices}
+        imageAlt="Pharmaceutical consultants reviewing market and regulatory strategy"
       />
 
       <section className="mx-auto max-w-6xl px-4 pt-14 sm:px-6">

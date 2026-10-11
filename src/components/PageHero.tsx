@@ -11,6 +11,7 @@ interface PageHeroProps {
   ctaTo: string;
   image?: string;
   imageAlt?: string;
+  imageFit?: "cover" | "contain";
 }
 
 export function PageHero({
@@ -21,6 +22,7 @@ export function PageHero({
   ctaTo,
   image,
   imageAlt = "",
+  imageFit = "cover",
 }: PageHeroProps) {
   return (
     <section className="mx-auto max-w-6xl px-4 pt-6 sm:px-6">
@@ -46,13 +48,13 @@ export function PageHero({
             </Button>
           </div>
           {image && (
-            <div className="relative min-h-56 overflow-hidden md:min-h-80">
+            <div className={`relative min-h-56 overflow-hidden md:min-h-80 ${imageFit === "contain" ? "bg-pastel-pink" : ""}`}>
               <img
                 src={image}
                 alt={imageAlt}
                 loading="eager"
                 fetchPriority="high"
-                className="h-56 w-full object-cover md:absolute md:inset-0 md:h-full"
+                className={`h-56 w-full md:absolute md:inset-0 md:h-full ${imageFit === "contain" ? "object-contain p-4" : "object-cover"}`}
               />
             </div>
           )}
