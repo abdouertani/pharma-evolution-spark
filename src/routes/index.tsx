@@ -9,6 +9,10 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import heroHome from "../assets/hero-home.jpg";
+import heroProducts from "../assets/hero-products.jpg";
+import heroTraining from "../assets/hero-training.jpg";
+import variofillAsset from "../assets/product-variofill.png.asset.json";
+import { Button } from "../components/ui/button";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -64,7 +68,11 @@ const steps = [
 
 function HomePage() {
   const [slide, setSlide] = useState(0);
-  const slides = [heroHome];
+  const slides = [
+    { image: heroHome, alt: "Body contouring aesthetic treatment" },
+    { image: heroProducts, alt: "LED skincare treatment" },
+    { image: heroTraining, alt: "Aesthetic medicine training" },
+  ];
 
   return (
     <div>
@@ -104,8 +112,8 @@ function HomePage() {
         <div className="relative">
           <div className="overflow-hidden rounded-3xl">
             <img
-              src={slides[slide]}
-              alt="Body contouring aesthetic treatment"
+              src={slides[slide]?.image}
+              alt={slides[slide]?.alt}
               width={1024}
               height={1024}
               className="aspect-square w-full object-cover"
@@ -113,9 +121,7 @@ function HomePage() {
           </div>
           {/* Product overlay chip */}
           <div className="absolute bottom-14 left-4 flex max-w-xs items-center gap-3 rounded-2xl border border-border bg-background/95 p-3 shadow-lg backdrop-blur">
-            <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-pastel-pink font-heading text-xs font-bold text-navy">
-              V
-            </div>
+            <img src={variofillAsset.url} alt="Variofill packaging" width={64} height={40} className="h-10 w-16 shrink-0 rounded-lg object-contain" />
             <div className="min-w-0">
               <p className="font-heading text-sm font-bold text-navy">Variofill®</p>
               <p className="truncate text-xs text-muted-foreground">
@@ -126,25 +132,27 @@ function HomePage() {
           </div>
           {/* Slider controls */}
           <div className="absolute bottom-4 right-4 flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-background" />
-            <span className="h-2 w-2 rounded-full bg-background/50" />
-            <span className="h-2 w-2 rounded-full bg-background/50" />
-            <button
+            {slides.map((item, index) => (
+              <Button key={item.alt} type="button" variant="ghost" aria-label={`Show picture ${index + 1}`} aria-pressed={slide === index} onClick={() => setSlide(index)} className="h-6 w-4 p-0 hover:bg-transparent">
+                <span className={`h-2 w-2 rounded-full ${slide === index ? "bg-background" : "bg-background/50"}`} />
+              </Button>
+            ))}
+            <Button
               type="button"
               aria-label="Previous slide"
               onClick={() => setSlide((s) => (s - 1 + slides.length) % slides.length)}
               className="grid h-7 w-7 place-items-center rounded-full bg-background text-navy"
             >
               <ArrowLeft className="h-3.5 w-3.5" />
-            </button>
-            <button
+            </Button>
+            <Button
               type="button"
               aria-label="Next slide"
               onClick={() => setSlide((s) => (s + 1) % slides.length)}
               className="grid h-7 w-7 place-items-center rounded-full bg-navy text-primary-foreground"
             >
               <ArrowRight className="h-3.5 w-3.5" />
-            </button>
+            </Button>
           </div>
         </div>
       </section>

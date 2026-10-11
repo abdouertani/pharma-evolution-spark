@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Award, Globe2, Microscope, Quote } from "lucide-react";
 import { PageHero } from "../components/PageHero";
-import productVariofill from "../assets/product-variofill.jpg";
+import variofillAsset from "../assets/product-variofill.png.asset.json";
 
 export const Route = createFileRoute("/partners")({
   head: () => ({
@@ -61,6 +61,8 @@ function PartnersPage() {
         description="Our strength lies in collaboration. PharmaEvolution partners with international laboratories, regulatory authorities, and scientific experts to ensure that every product we promote meets the highest standards of safety, quality, and innovation."
         ctaLabel="Become a partner"
         ctaTo="/contact"
+        image={variofillAsset.url}
+        imageAlt="Variofill by our German partner Adoderm"
       />
 
       {/* Adoderm */}
@@ -104,10 +106,10 @@ function PartnersPage() {
           <div className="rounded-3xl border border-border bg-card p-6">
             <div className="bg-pastel-pink rounded-2xl p-4">
               <img
-                src={productVariofill}
+                src={variofillAsset.url}
                 alt="Variofill dermal filler packaging"
                 loading="lazy"
-                className="aspect-[4/3] w-full rounded-xl object-cover"
+                className="aspect-[956/598] w-full rounded-xl object-contain"
               />
             </div>
             <h3 className="mt-5 font-heading text-lg font-bold text-navy">
